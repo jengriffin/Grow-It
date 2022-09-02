@@ -1,0 +1,4 @@
+-- settings.sql
+CREATE DATABASE grow;
+CREATE USER growuser WITH PASSWORD 'tunr';
+GRANT ALL PRIVILEGES ON DATABASE grow TO growuser;

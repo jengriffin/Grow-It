@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class Plants(models.Model):
+class Plant(models.Model):
     name = models.CharField(max_length=200)
     image = models.ImageField()
     info = models.TextField()
@@ -14,7 +14,7 @@ class Plants(models.Model):
 
 class Blog(models.Model):
     plants = models.ForeignKey(
-        Plants, on_delete=models.CASCADE, related_name='plants')
+        Plant, on_delete=models.CASCADE, related_name='plants')
     date = models.DateField(auto_now=True)
     title = models.CharField(max_length=200)
     body = models.TextField()
@@ -25,7 +25,7 @@ class Blog(models.Model):
 
 class User(models.Model):
     email = models.EmailField(max_length=200)
-    username = models.CharField()
+    username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
 
     def __str__(self):

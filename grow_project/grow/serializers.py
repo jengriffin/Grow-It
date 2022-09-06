@@ -11,7 +11,7 @@ class PlantSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Plant
-        fields = ('id', 'name', 'image', 'info', 'blog',)
+        fields = ('id', 'name', 'image', 'info', 'blogs',)
 
 
 class BlogSerializer(serializers.HyperlinkedModelSerializer):
@@ -38,4 +38,4 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'username', 'blog',)
+        fields = ('id', 'username', 'blogs',)

@@ -3,15 +3,15 @@ from .models import Plant, Blog, User
 
 
 class PlantSerializer(serializers.HyperlinkedModelSerializer):
-    blogs = serializers.HyperlinkedRelatedField(
-        view_name='blog_detail',
-        many=True,
-        read_only=True
-    )
+    # blogs = serializers.HyperlinkedRelatedField(
+    #     view_name='blog_detail',
+    #     many=True,
+    #     read_only=True
+    # )
 
     class Meta:
         model = Plant
-        fields = ('id', 'name', 'image', 'info', 'blogs',)
+        fields = ('id', 'name', 'image', 'info', )
 
 
 class BlogSerializer(serializers.HyperlinkedModelSerializer):

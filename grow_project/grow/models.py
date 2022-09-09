@@ -15,7 +15,7 @@ class Plant(models.Model):
 
 class Blog(models.Model):
     plants = models.ForeignKey(
-        Plant, on_delete=models.CASCADE, related_name='plants', null=True)
+        Plant, on_delete=models.CASCADE, related_name='plants', null=True, blank=True)
     date = models.DateField(auto_now=True)
     title = models.CharField(max_length=200)
     body = models.TextField()

@@ -16,11 +16,13 @@ class PlantDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class BlogList(generics.ListCreateAPIView):
+    print('in Blog List')
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
 
 
 class BlogDetail(generics.RetrieveUpdateDestroyAPIView):
+    print('in blog detail')
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
 

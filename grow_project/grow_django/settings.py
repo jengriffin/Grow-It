@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!xhgvg15^0xcq#879@*i-=$zx^%=hr_hz$49g_rzwb!s!jrc-#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -63,6 +63,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
+
 CSRF_COOKIE_SECURE = True
 ROOT_URLCONF = 'grow_django.urls'
 

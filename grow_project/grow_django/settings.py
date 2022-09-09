@@ -44,9 +44,12 @@ INSTALLED_APPS = [
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    #     # 'rest_framework.permissions.IsAdminUser',
+    # ],
+    # 'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.TokenAuthentication'],
+
 }
 
 MIDDLEWARE = [
@@ -60,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
-
+CSRF_COOKIE_SECURE = True
 ROOT_URLCONF = 'grow_django.urls'
 
 TEMPLATES = [

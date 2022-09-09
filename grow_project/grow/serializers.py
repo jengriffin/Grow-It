@@ -19,14 +19,14 @@ class BlogSerializer(serializers.HyperlinkedModelSerializer):
         view_name='plant_detail',
         read_only=True
     )
-    user = serializers.HyperlinkedRelatedField(
-        view_name='user_detail',
-        read_only=True
-    )
+    # user = serializers.HyperlinkedRelatedField(
+    #     view_name='user_detail',
+    #     read_only=True
+    # )
 
     class Meta:
         model = Blog
-        fields = ('id', 'date', 'title', 'body', 'plant', 'user',)
+        fields = ('id', 'date', 'title', 'body', 'plant',)
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

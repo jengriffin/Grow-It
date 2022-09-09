@@ -1,3 +1,4 @@
+from operator import truediv
 from django.db import models
 
 # Create your models here.
@@ -14,7 +15,7 @@ class Plant(models.Model):
 
 class Blog(models.Model):
     plants = models.ForeignKey(
-        Plant, on_delete=models.CASCADE, related_name='plants')
+        Plant, on_delete=models.CASCADE, related_name='plants', null=True)
     date = models.DateField(auto_now=True)
     title = models.CharField(max_length=200)
     body = models.TextField()

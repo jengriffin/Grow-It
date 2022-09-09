@@ -2,6 +2,8 @@ from django.shortcuts import render
 from rest_framework import generics
 from .serializers import PlantSerializer, BlogSerializer, UserSerializer
 from .models import Plant, Blog, User
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 # Create your views here.
 
 
@@ -15,11 +17,13 @@ class PlantDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PlantSerializer
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class BlogList(generics.ListCreateAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class BlogDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer

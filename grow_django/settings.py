@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-!xhgvg15^0xcq#879@*i-=$zx^%=hr_hz$49g_rzwb!s!jrc-#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['grow-it-back.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -45,9 +45,12 @@ INSTALLED_APPS = [
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    #     # 'rest_framework.permissions.IsAdminUser',
+    # ],
+    # 'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.TokenAuthentication'],
+
 }
 
 MIDDLEWARE = [
@@ -62,6 +65,7 @@ MIDDLEWARE = [
 ]
 CORS_ORIGIN_ALLOW_ALL = True
 
+CSRF_COOKIE_SECURE = True
 ROOT_URLCONF = 'grow_django.urls'
 
 TEMPLATES = [

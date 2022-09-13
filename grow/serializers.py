@@ -1,17 +1,15 @@
+
+
 from rest_framework import serializers
 from .models import Plant, Blog, User
 
 
-class PlantSerializer(serializers.HyperlinkedModelSerializer):
-    # blogs = serializers.HyperlinkedRelatedField(
-    #     view_name='blog_detail',
-    #     many=True,
-    #     read_only=True
-    # )
+class PlantSerializer(serializers.ModelSerializer):
+    image_url = serializers.ImageField(required=False)
 
     class Meta:
         model = Plant
-        fields = ('id', 'name', 'image', 'info', )
+        fields = "__all__"
 
 
 class BlogSerializer(serializers.HyperlinkedModelSerializer):

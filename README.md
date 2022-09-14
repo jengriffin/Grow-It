@@ -21,6 +21,9 @@ There are 2 universal truths about gardners: Every spring the smell of dirt and 
 ### **_Screenshots_**
 ![CHD](assests/CHD.png)
 ![ERD](assests/ERD.png)
+![HomePage](media/home page.png)
+![Notes](media/notes.png)
+![Form](media/add note form.png)
 
 
 ### **_Technologies Used_**
@@ -32,6 +35,7 @@ There are 2 universal truths about gardners: Every spring the smell of dirt and 
 - Djano
 - React
 - Postgres
+- TailwindCSS
 
 ---
 

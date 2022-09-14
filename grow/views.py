@@ -6,7 +6,6 @@ from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser, FileUploadParser
 from rest_framework import status
 from django.conf import settings
-# Create your views here.
 
 
 class PlantList(generics.ListCreateAPIView):

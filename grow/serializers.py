@@ -17,10 +17,10 @@ class BlogSerializer(serializers.HyperlinkedModelSerializer):
         view_name='plant_detail',
         read_only=True
     )
-    # user = serializers.HyperlinkedRelatedField(
-    #     view_name='user_detail',
-    #     read_only=True
-    # )
+    user = serializers.HyperlinkedRelatedField(
+        view_name='user_detail',
+        read_only=True
+    )
     print("in blog serializer")
 
     class Meta:

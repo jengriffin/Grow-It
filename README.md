@@ -50,3 +50,5 @@ npm start
 ### **_Credits_**
 
 #### **Markdown Guide:[GitHub](https://github.com/jengriffin/u1_hw_markdown)**
+**[Styling](https://medium.com/codingthesmartway-com-blog/how-to-use-tailwind-css-with-react-9dd78bbdc0e0)**
+**[File upload](https://www.geeksforgeeks.org/file-uploading-in-react-js/)**
